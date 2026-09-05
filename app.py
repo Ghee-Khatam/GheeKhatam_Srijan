@@ -12,7 +12,7 @@ from src.rag_extractor import process_paper
 from src.generator import generate_paper
 from src.exporter import export_docx
 
-app = Flask(__name__, static_folder=os.path.join(os.path.dirname(os.path.abspath(__file__)), 'Frontend', 'dist'), static_url_path='')
+app = Flask(__name__, static_folder='static', static_url_path='')
 CORS(app)
 
 @app.route("/")
