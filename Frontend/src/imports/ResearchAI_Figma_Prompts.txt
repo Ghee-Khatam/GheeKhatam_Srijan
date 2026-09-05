@@ -1,0 +1,1281 @@
+FIGMA PROMPTS: RESEARCHAI FRONTEND
+=================================
+
+HOW TO USE
+----------
+Attach this file to Figma and use the prompts sequentially.
+
+There are 8 logical design stages. Each stage is a substantial prompt and is designed to extend the same ResearchAI application rather than create a separate design.
+
+PRODUCT
+-------
+ResearchAI is an AI-powered Research Discovery and Paper Generation Platform.
+
+Core journey:
+Research Idea
+→ AI Analysis
+→ Keywords & Related Concepts
+→ Research Paper Discovery
+→ RAG-Based Paper Analysis
+→ Research Gaps
+→ Transparent Relevance Ranking
+→ User Selects Preferred Papers
+→ Refined Research Direction
+→ AI Validation
+→ Research Paper Generation
+→ Paper Editing
+→ IEEE Preview
+→ DOCX Export
+→ Download
+
+IMPORTANT:
+ResearchAI is NOT a generic AI chatbot and NOT simply an AI paper-writing tool. Its primary value is research discovery, evidence analysis, research-gap identification, and helping the researcher formulate a stronger research direction before generating the final paper.
+
+============================================================
+STEP 1: FOUNDATION, APPLICATION SHELL & DASHBOARD
+============================================================
+
+Design the foundation of a complete production-quality web application called "ResearchAI".
+
+Create a desktop-first application targeting 1440px, with responsive behavior for 1280px, 1024px, 768px, and mobile.
+
+Create a persistent application shell:
+
+LEFT SIDEBAR
+TOP NAVIGATION
+MAIN CONTENT AREA
+
+LEFT SIDEBAR:
+- ResearchAI logo
+- Dashboard
+- Research Discovery
+- My Research
+- Saved Papers
+- Generated Papers
+- Settings
+- Help
+- User profile
+
+User profile:
+Researcher
+researcher@email.com
+
+TOP NAVIGATION:
+- Breadcrumbs
+- Current research project
+- Global search
+- Notifications
+- User profile
+
+Project status:
+Discovery
+Analyzing
+Researching
+Refining
+Generating
+Completed
+
+DASHBOARD:
+Header:
+"Good morning, Researcher."
+
+Subtitle:
+"Turn your research idea into a stronger, evidence-backed research direction."
+
+Primary CTA:
+"+ New Research Project"
+
+Secondary:
+"Continue Research"
+
+Create "Recent Research Projects" with 3–4 realistic project cards.
+
+Example:
+Fake Product Review Detection
+Research Discovery
+47 papers discovered
+23 papers analyzed
+8 research gaps
+5 papers selected
+Updated 12 min ago
+
+Create research statistics:
+47 Papers Discovered
+23 Papers Analyzed
+8 Research Gaps
+3 Generated Papers
+
+Create a Quick Start card:
+"Have a research idea?"
+"What do you want to research?"
+"Start Research Discovery"
+
+Also create an empty dashboard state:
+"Start your first research project"
+"Turn a rough idea into an evidence-backed research direction."
+"Create Research Project"
+
+Create reusable components:
+Sidebar
+Topbar
+Project Card
+Statistic Card
+Primary Button
+Secondary Button
+Search Input
+Status Badge
+Progress Indicator
+Empty State
+User Profile
+
+Do not finalize the color theme yet. Focus on layout, hierarchy, spacing, typography, responsive behavior, and reusable components.
+
+============================================================
+STEP 2: RESEARCH INPUT + AI ANALYSIS
+============================================================
+
+Continue the SAME ResearchAI application from Step 1. Do not redesign the application shell.
+
+Create the complete first-stage research discovery flow.
+
+SCREEN: NEW RESEARCH PROJECT
+
+Header:
+"Start a New Research Project"
+
+Subtitle:
+"Tell us what you're thinking. Your idea doesn't need to be complete."
+
+Create a large research idea textarea.
+
+Placeholder:
+"I want to develop an AI system that detects fake product reviews using text and images..."
+
+Allow optional structured fields:
+- Research Topic
+- Problem Statement
+- Technologies
+- Target Domain
+- Known Methodology
+- Additional Preferences
+
+Clearly mark these as optional.
+
+KEYWORDS:
+Allow manually entered keyword chips.
+
+Example:
+Fake Review Detection
+Multimodal AI
+NLP
+Computer Vision
+
+Allow adding/removing chips.
+
+RESEARCH PREFERENCES:
+- Research Area
+- Publication Type
+- Preferred Year Range
+- Maximum Papers
+
+Publication Type:
+Journal
+Conference
+Preprint
+Any
+
+Year range:
+2020–2026
+
+Maximum:
+20 / 30 / 50
+
+RESEARCH SOURCES:
+Checkboxes:
+Semantic Scholar
+arXiv
+OpenAlex
+Crossref
+
+Supporting text:
+"ResearchAI uses legally accessible academic sources and APIs where available."
+
+Primary:
+"Analyze My Research Idea →"
+
+Secondary:
+"Save Draft"
+
+SCREEN: AI ANALYSIS
+
+Header:
+"Analyzing Your Research Idea"
+
+Subtitle:
+"ResearchAI is mapping your idea against the existing research landscape."
+
+Do not use only a spinner.
+
+Pipeline:
+✓ Research idea received
+✓ Understanding research topic
+✓ Extracting keywords
+✓ Identifying related concepts
+● Finding relevant research papers
+○ Processing papers
+○ Identifying research gaps
+○ Calculating relevance
+○ Preparing research landscape
+
+Show:
+47 papers found
+18 papers processed
+8 potential gaps identified
+
+Show:
+"Research Concepts Identified"
+
+Primary:
+Fake Review Detection
+Multimodal Learning
+Product Reviews
+
+Secondary:
+Review Authenticity
+Sentiment Analysis
+Deep Learning
+NLP
+Image-Text Analysis
+
+Related:
+Fraud Detection
+Multimodal Classification
+Computer Vision
+
+Also show:
+"Preparing Research Search"
+
+Example concepts:
+fake review detection
+deceptive review classification
+multimodal review analysis
+image-text fraud detection
+review authenticity
+
+Create error states:
+Missing research idea
+API failure
+No keywords
+
+Connect:
+Dashboard → New Research Project → Research Input → AI Analysis → Research Landscape
+
+Do not finalize colors yet.
+
+============================================================
+STEP 3: RESEARCH LANDSCAPE + PAPER RESULTS
+============================================================
+
+Continue the SAME ResearchAI application.
+
+Create the main Research Landscape experience.
+
+Header:
+"Research Landscape"
+
+Subtitle:
+"47 relevant research papers discovered based on your research idea."
+
+Show:
+YOUR RESEARCH IDEA
+
+"I want to build an AI system for detecting fake product reviews using text and images."
+
+Show:
+Primary Keywords
+Secondary Keywords
+Related Concepts
+
+Summary:
+47 Relevant Papers
+23 Papers Analyzed
+8 Research Gaps
+12 High-Relevance Papers
+
+Create:
+"Research Landscape Overview"
+
+Visualize:
+Text-Based Approaches
+Multimodal Approaches
+Transformer-Based Approaches
+Traditional Machine Learning
+Explainable AI
+
+Then create:
+"Relevant Research Papers"
+
+Subtitle:
+"Ranked according to transparent relevance scoring."
+
+Controls:
+Search papers
+Sort: Relevance / Recency / Citations
+Filters: Year / Methodology / Dataset / Research Area / Relevance
+
+IMPORTANT:
+EVERY PAPER MUST HAVE A CHECKBOX.
+
+Top:
+"0 papers selected"
+
+After selection:
+"3 papers selected"
+
+Sticky bottom action bar:
+"3 papers selected"
+"Review Selection"
+"Continue to Research Workspace →"
+
+PAPER CARD:
+
+☐ #1
+94% RELEVANT
+
+Title:
+"Multimodal Detection of Deceptive Product Reviews"
+
+Authors:
+John Doe, Jane Smith, Alex Brown
+
+2025
+Research Conference
+
+Source:
+Semantic Scholar
+
+DOI:
+10.xxxx/xxxxx
+
+ABSTRACT:
+Show concise preview.
+
+WHY THIS PAPER MATTERS:
+"Strong overlap with your proposed multimodal review detection approach."
+
+MATCHING KEYWORDS:
+Fake Review Detection
+Multimodal Learning
+Text-Image Fusion
+
+METHODOLOGY:
+Multimodal Transformer
+
+DATASET:
+Amazon Reviews
+
+KEY FINDINGS:
+Short summary.
+
+RESEARCH GAPS:
+1. Text-image fusion remains underexplored.
+2. Dataset diversity is limited.
+3. Explainability is not evaluated.
+
+Badges:
+EXPLICIT GAP
+AI-INFERRED GAP
+
+LIMITATIONS:
+Show concise limitations.
+
+Button:
+"View Full Analysis"
+
+Allow cards to expand.
+
+Create:
+No papers found
+Research sources unavailable
+
+Keep paper metadata scannable.
+
+Do not finalize colors yet.
+
+============================================================
+STEP 4: RAG ANALYSIS + RESEARCH GAPS + PAPER SELECTION
+============================================================
+
+Continue the SAME ResearchAI application.
+
+When "View Full Analysis" is clicked, open a large side panel or modal without leaving the Research Landscape.
+
+Panel sections:
+Paper Overview
+Abstract
+Research Problem
+Methodology
+Dataset
+Results
+Limitations
+Future Work
+Research Gaps
+Evidence
+Relevance
+
+Show metadata:
+Title
+Authors
+Year
+Venue
+DOI
+Source
+
+RAG ANALYSIS:
+Show:
+Research Problem
+Methodology
+Dataset
+Results
+Limitations
+Future Work
+Conclusion
+
+The purpose is to let researchers understand the paper without reading the entire paper.
+
+RESEARCH GAPS:
+Example:
+1. Text-image fusion remains underexplored.
+2. Dataset diversity is limited.
+3. Explainability is not evaluated.
+
+Every gap must be:
+EXPLICIT GAP
+or
+AI-INFERRED GAP
+
+Explicit Gap = directly supported by the paper.
+AI-Inferred Gap = inferred from methodology, limitations, or research context.
+
+Never make an AI inference look like a direct statement from a paper.
+
+EVIDENCE:
+For explicit gaps show:
+"SOURCE EVIDENCE"
+with a short supporting evidence snippet.
+
+For inferred gaps show:
+"AI-INFERRED"
+and:
+"Why ResearchAI identified this gap"
+
+LIMITATIONS:
+Limited dataset diversity
+Domain-specific evaluation
+No explainability analysis
+
+RELEVANCE:
+Keyword Similarity 91
+Research Gap Relevance 85
+Semantic Similarity 88
+Recency 70
+
+Final Score:
+86.4 / 100
+
+Expandable:
+"How is this score calculated?"
+
+40% Keyword Similarity
+30% Research Gap Relevance
+20% Semantic Similarity
+10% Recency
+
+Show:
+"This paper ranked highly because it strongly matches your keywords and addresses a research gap related to your proposed methodology."
+
+Trust labels:
+SOURCE EVIDENCE
+AI-INFERRED GAP
+USER PROVIDED
+AI GENERATED
+SOURCE VERIFIED
+
+SELECTED PAPERS SCREEN:
+
+"Your Research Sources"
+
+"You selected 5 papers to inform your research direction."
+
+Each:
+Checkbox
+Title
+Authors
+Year
+Relevance
+Main research gap
+Why it matters
+
+Allow Remove.
+
+Summary:
+5 Papers Selected
+8 Research Gaps
+3 Methodologies Compared
+
+Primary:
+"Continue to Research Workspace →"
+
+Empty:
+"No research papers selected yet."
+
+Do not finalize colors yet.
+
+============================================================
+STEP 5: RESEARCH WORKSPACE + AI VALIDATION
+============================================================
+
+Continue the SAME ResearchAI application.
+
+Create:
+"Research Workspace"
+
+Header:
+"Refine Your Research"
+
+Subtitle:
+"Use the research landscape to strengthen your research direction."
+
+Create fields:
+
+RESEARCH IDEA
+Large textarea.
+
+IMPORTANT:
+Allow the researcher to enter their COMPLETE research idea in their own words.
+
+Example:
+"I want to combine text and image features using a multimodal transformer and compare it against text-only baseline models."
+
+PROPOSED METHODOLOGY
+Large textarea.
+
+DATASET
+Input/textarea.
+
+TECHNOLOGIES
+Chip input:
+Python
+PyTorch
+Transformers
+RAG
+Computer Vision
+
+EXPECTED CONTRIBUTION
+Textarea.
+
+ADDITIONAL INFORMATION
+Optional textarea.
+
+Right panel:
+SELECTED RESEARCH SOURCES
+
+Show selected papers from Step 4.
+
+Also:
+RESEARCH GAPS YOU'RE ADDRESSING
+
+Example:
+✓ Multimodal analysis
+✓ Dataset diversity
+✓ Explainability
+
+This should visually connect:
+Existing Research → Research Gap → Proposed Research
+
+Primary:
+"Submit Research Direction →"
+
+Secondary:
+"Save Draft"
+
+AI VALIDATION:
+
+Header:
+"Research Validation"
+
+Subtitle:
+"ResearchAI is checking whether your research direction contains enough information to generate a reliable paper."
+
+Checklist:
+Research Problem ✓ Defined
+Methodology ✓ Defined
+Dataset ⚠ Needs clarification
+Baseline Models ⚠ Needs clarification
+Evaluation Metrics ⚠ Needs clarification
+Expected Contribution ✓ Defined
+
+CLARIFYING QUESTIONS:
+
+"Two details would strengthen your research plan."
+
+Question:
+"Which dataset will you use?"
+
+Question:
+"Which evaluation metrics will you report?"
+
+Potential:
+"What baseline models will you compare against?"
+"What is the expected novelty compared with the closest existing approaches?"
+
+Only ask questions that materially affect the paper.
+
+Do not make this a generic chatbot. Use structured question cards.
+
+After completion:
+"Research Plan Validated ✓"
+
+Show all items as complete.
+
+Primary:
+"Generate Research Paper →"
+
+Connect:
+Selected Papers → Research Workspace → Submit Research Direction → AI Validation → Clarifying Questions → Validation Complete
+
+Do not finalize colors yet.
+
+============================================================
+STEP 6: PAPER GENERATION + ACADEMIC PAPER EDITOR
+============================================================
+
+Continue the SAME ResearchAI application.
+
+Create paper generation and editing.
+
+SCREEN: PAPER GENERATION
+
+"Generating Your Research Paper"
+
+"ResearchAI is building your paper using your research direction and selected sources."
+
+Progress:
+✓ Research sources reviewed
+✓ Research gaps analyzed
+✓ Methodology validated
+✓ Paper structure prepared
+● Generating paper sections
+○ Checking citations
+○ Preparing document
+
+Sections:
+Title ✓
+Abstract ✓
+Introduction ✓
+Related Work ●
+Problem Statement ○
+Proposed Methodology ○
+System Architecture ○
+Dataset ○
+Experimental Setup ○
+Results ○
+Discussion ○
+Limitations ○
+Future Work ○
+Conclusion ○
+References ○
+
+Safety notice:
+"ResearchAI does not fabricate research papers, authors, citations, datasets, experimental results, or accuracy values."
+
+If results are unavailable:
+"[RESULTS TO BE ADDED AFTER EXPERIMENTATION]"
+
+SCREEN: GENERATED PAPER EDITOR
+
+Create a professional three-column academic document editor.
+
+LEFT:
+Paper Outline
+
+1. Title
+2. Abstract
+3. Keywords
+4. Introduction
+5. Related Work
+6. Problem Statement
+7. Proposed Methodology
+8. System Architecture
+9. Dataset
+10. Experimental Setup
+11. Results
+12. Discussion
+13. Limitations
+14. Future Work
+15. Conclusion
+16. References
+
+CENTER:
+Actual academic paper.
+
+RIGHT:
+AI Research Assistant
+Sources
+
+The center must look like a real academic paper, not chatbot output.
+
+Show:
+Title
+Authors
+Affiliations
+Abstract
+Keywords
+Numbered sections
+Paragraphs
+Tables
+Figures
+References
+
+Editing:
+Edit
+Improve
+Rewrite
+Expand
+Shorten
+Check Citation
+Explain
+Regenerate Section
+
+Formatting:
+Bold
+Italic
+Headings
+Lists
+Tables
+Figures
+Citations
+
+AI Research Assistant:
+Improve this section
+Find supporting source
+Explain this claim
+Check citation
+Suggest missing information
+
+Do not make the assistant a full-screen chatbot.
+
+CITATION PANEL:
+
+INTRODUCTION
+
+Sources:
+[1] Multimodal Review Detection
+[4] Transformer-Based Fraud Detection
+[8] Explainable Review Classification
+
+Click source:
+Open Paper Analysis
+
+Unsupported claim:
+⚠ SOURCE REQUIRED
+"This claim requires supporting evidence."
+
+RESULTS:
+
+If no experiments:
+RESULTS
+[RESULTS TO BE ADDED AFTER EXPERIMENTATION]
+
+Suggested:
+Accuracy
+Precision
+Recall
+F1-score
+
+Badge:
+"Awaiting Experimental Results"
+
+Never show fabricated numbers.
+
+Show document status:
+Saved just now
+Saving...
+Draft
+Ready for Review
+Ready for Export
+
+Show paper quality indicators:
+Sections Complete 14/16
+Sources Verified 21/23
+Claims Requiring Sources 2
+Experimental Results Pending
+
+Do not finalize colors yet.
+
+============================================================
+STEP 7: PAPER PREVIEW + IEEE EXPORT + DOCX
+============================================================
+
+Continue the SAME ResearchAI application.
+
+Create the final document-generation workflow.
+
+PAPER PREVIEW:
+
+"Paper Preview"
+
+The user MUST be able to see the final document before downloading.
+
+Toolbar:
+Edit
+Preview
+References
+Check Citations
+Export
+
+Show:
+Title
+Authors
+Affiliation
+Abstract
+Keywords
+Sections
+Tables
+Figures
+References
+
+Use a realistic academic page layout.
+
+IEEE EXPORT:
+
+"Prepare IEEE Document"
+
+Settings:
+IEEE Style
+Two-column layout
+Academic typography
+Section numbering
+Reference formatting
+
+Checklist:
+✓ Title
+✓ Abstract
+✓ Keywords
+✓ Section Structure
+✓ References
+✓ Citations
+✓ Tables
+✓ Figure Placeholders
+
+Show document preview thumbnail.
+
+EXPORT VALIDATION:
+
+Paper Structure ✓ Complete
+Citations ✓ Reviewed
+References ✓ Available
+Research Gaps ✓ Documented
+Experimental Results ⚠ Awaiting user results
+
+Warning:
+"Experimental results have not been provided. The Results section contains a placeholder."
+
+Primary:
+"Generate IEEE Word Document"
+
+Secondary:
+"Back to Editor"
+
+DOCX GENERATION:
+
+"Preparing Your IEEE Document"
+
+Pipeline:
+✓ Validating paper structure
+✓ Formatting sections
+✓ Formatting references
+✓ Applying IEEE layout
+● Preparing DOCX
+○ Finalizing document
+
+DOCUMENT READY:
+
+"Your IEEE Research Paper Is Ready"
+
+"Your research direction has been transformed into an evidence-backed research paper draft."
+
+File:
+Fake_Product_Review_Detection_IEEE.docx
+
+DOCX
+2.4 MB
+16 sections
+23 references
+
+Primary:
+"Download Word Document"
+
+Secondary:
+"Open Paper"
+"Continue Editing"
+
+PROJECT COMPLETION:
+
+Research Idea ✓
+AI Analysis ✓
+47 Papers Discovered ✓
+23 Papers Analyzed ✓
+8 Research Gaps Identified ✓
+5 Papers Selected ✓
+Research Direction Refined ✓
+AI Validation ✓
+Research Paper Generated ✓
+IEEE Preview Reviewed ✓
+DOCX Created ✓
+
+FULL PROTOTYPE:
+
+Dashboard
+→ New Research Project
+→ Research Input
+→ AI Analysis
+→ Research Landscape
+→ Paper Results
+→ Paper Analysis
+→ Paper Selection
+→ Selected Papers
+→ Research Workspace
+→ AI Validation
+→ Clarifying Questions
+→ Paper Generation
+→ Paper Editor
+→ Citation Review
+→ Paper Preview
+→ IEEE Export
+→ DOCX Generation
+→ Document Ready
+
+Include loading, empty, error, success, saving, selection, validation, and generation states.
+
+Do not finalize colors yet.
+
+============================================================
+STEP 8: FINAL GOLDEN SUMMER FIELDS THEME + LIGHT/DARK MODE
+============================================================
+
+Apply the FINAL visual identity to the SAME ResearchAI application created in Steps 1–7.
+
+DO NOT redesign the UX.
+DO NOT change the workflow.
+DO NOT remove screens.
+DO NOT change the information architecture.
+
+This step is for:
+Color
+Contrast
+Typography refinement
+Component styling
+Visual hierarchy
+Light mode
+Dark mode
+Microinteractions
+Accessibility
+Final visual polish
+
+FINAL BRAND:
+"GOLDEN SUMMER FIELDS"
+
+Original direction:
+#CCD5AE
+#E9EDC9
+#FEFAE0
+#FAEDCD
+#D4A373
+
+Use this REFINED high-contrast professional palette:
+
+LIGHT MODE:
+Page Background: #FFFDF4
+Card: #FFFFFF
+Secondary Surface: #F7F3E3
+Primary Text: #1C211B
+Secondary Text: #5F6656
+Border: #D8D6C5
+
+PRIMARY:
+#7A8750
+
+PRIMARY HOVER:
+#687442
+
+ACCENT:
+#D4A373
+
+SOFT SAGE:
+#CCD5AE
+
+SOFT CREAM:
+#FAEDCD
+
+DARK MODE:
+Page Background: #1C211B
+Primary Surface: #252B23
+Elevated Surface: #30372D
+Primary Text: #F7F5E8
+Secondary Text: #D8D8C9
+Border: #3B4237
+Primary: #7A8750
+Primary Hover: #8E9C60
+Accent: #D4A373
+
+SEMANTIC:
+Success: #4F7A55
+Warning: #B7791F
+Error: #B94A48
+
+COLOR LANGUAGE:
+
+Deep Forest:
+Research structure
+Main typography
+Navigation
+Dark background
+
+Olive:
+Primary actions
+AI actions
+Active states
+Important interactions
+Progress
+
+Warm Wheat:
+Research insights
+Highlights
+Selected elements
+Special accents
+
+Sage:
+Keywords
+Metadata
+Research tags
+Secondary information
+
+Green:
+Complete / Verified
+
+Amber:
+Needs attention
+
+Red:
+Error
+
+CONTRAST:
+
+LIGHT MODE:
+#FFFDF4 + #1C211B
+#FFFFFF + #1C211B
+#F7F3E3 + #1C211B
+
+Do not use pale text on light surfaces.
+
+DARK MODE:
+#1C211B + #F7F5E8
+#252B23 + #F7F5E8
+#30372D + #D8D8C9
+
+Do not use dark text on dark surfaces.
+
+Dark mode must be genuinely dark, not simply a darker light mode.
+
+SIDEBAR:
+
+Light:
+Warm Ivory / White
+Deep Forest text
+Olive active state
+
+Dark:
+Deep Forest
+Warm Light text
+Olive active state
+
+BUTTONS:
+
+Primary:
+Olive background + light text
+
+Examples:
+Analyze My Research Idea
+Generate Research Paper
+Generate IEEE Word Document
+
+Secondary:
+Neutral surface + Deep Forest text
+
+PAPER CARDS:
+
+Keep cards mostly neutral:
+White / Warm Ivory
+Deep Forest typography
+Sage metadata
+Olive actions
+
+Do not color entire cards according to relevance.
+
+RELEVANCE:
+
+90–100:
+Success #4F7A55
+
+70–89:
+Warning #B7791F
+
+0–69:
+Error #B94A48
+
+Use small badges and text, not full-card colors.
+
+RESEARCH GAPS:
+
+Explicit Gap:
+Neutral/Sage treatment
+
+AI-Inferred Gap:
+Warm Wheat treatment
+
+AI VISUAL LANGUAGE:
+
+Olive represents AI functionality.
+
+Use labels:
+AI GENERATED
+AI-INFERRED GAP
+SOURCE EVIDENCE
+USER PROVIDED
+AWAITING USER INPUT
+EXPERIMENTAL RESULT REQUIRED
+
+DOCUMENT EDITOR:
+
+Paper surface should be white for readability even in dark mode.
+
+Paper:
+#FFFFFF
+
+Text:
+#1C211B
+
+Headings:
+#1C211B
+
+Citations:
+#7A8750
+
+AI suggestions:
+Subtle Sage/Wheat
+
+IEEE PREVIEW:
+
+White document
+Professional academic typography
+Two-column structure
+Numbered sections
+References
+Tables
+Figures
+
+TYPOGRAPHY:
+
+Use a clean modern sans-serif for the application UI.
+
+Use professional academic typography for the paper preview.
+
+Prioritize:
+Readability
+Hierarchy
+Line height
+Spacing
+
+CARDS:
+
+Moderate corner radius
+Thin borders
+Soft shadows
+No excessive glassmorphism
+No huge rounded rectangles
+No heavy shadows
+
+MICROINTERACTIONS:
+
+Checkbox selection
+Paper expansion
+Progress animation
+Score animation
+Button hover
+Sidebar selection
+Theme transition
+Save indicator
+Toast notification
+Document generation progress
+
+ACCESSIBILITY:
+
+Maintain strong contrast.
+
+Do not communicate meaning using color alone.
+
+High Relevance must include color + text.
+AI-Inferred Gap must include color + text.
+
+FINAL VISUAL PRIORITIES:
+
+1. Research Landscape
+2. Research Paper Cards
+3. Paper Analysis
+4. Research Gap Evidence
+5. Paper Selection
+6. Research Workspace
+7. Paper Editor
+8. IEEE Preview
+
+FINAL PERSONALITY:
+
+Academic
+Warm
+Intelligent
+Trustworthy
+Modern
+Premium
+Evidence-driven
+
+Do NOT make it look like:
+Generic AI chatbot
+Generic SaaS dashboard
+AI essay writer
+Finance application
+Social media platform
+
+The final impression should be:
+"An intelligent academic research platform."
+
+The Golden Summer Fields identity should be mature, high-contrast, and technologically sophisticated.
+
+Ensure all screens from Steps 1–7 use the same final visual system.
+
+FINAL PRODUCT STORY:
+
+"I have an idea."
+→ "ResearchAI understands it."
+→ "It discovers existing research."
+→ "It explains why papers matter."
+→ "It identifies research gaps."
+→ "I choose the papers I trust."
+→ "I refine my methodology."
+→ "AI validates my research direction."
+→ "AI generates my paper."
+→ "I inspect and edit it."
+→ "I preview the IEEE version."
+→ "I download the Word document."
+
+Make the final Figma prototype cohesive, polished, responsive, accessible, and realistic to implement with React, Next.js, TypeScript, and Tailwind CSS.
